@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block main %}
+    <form method="post" class="form-add">
+        <h2>Добавление нового курса</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+         <button class="btn btn-outline-warning" type="submit">Добавить</button>
+    </form>
+
+{% endblock %}
